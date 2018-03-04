@@ -4,9 +4,9 @@ import './app.component.css';
 
 
 @Component({
-  selector: 'hello-angular',
+  selector: 'my-links',
   template: templateString,
 })
 export class AppComponent {
-  name = 'My Links!';
+
 }
