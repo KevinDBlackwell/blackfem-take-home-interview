@@ -23,3 +23,12 @@ The web server is the normal Rails development server:
 You will also need to run the webpack dev server at the same time in another window to compile and run the Angular app.
 
 `./bin/webpack-dev-server`
+
+## Initializing the database
+The Rails app is configured to use PostgreSQL as its database. Assuming you have PostgreSQL installed on your system and it is running, you should be able to create the database with:
+
+`rake db:create`
+
+And populate it with
+
+`rake db:migrate`
