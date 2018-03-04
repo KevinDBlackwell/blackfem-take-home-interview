@@ -1,24 +1,25 @@
-# README
+# BlackFem Take Home Interview - My Links
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby and Rails version
+This sample app has been run and tested with Ruby version 2.5.0 and Rails 5.1.5.
 
-Things you may want to cover:
+## Installing
+It is recommended that you install using [RVM](https://rvm.io) or [rbenv](https://github.com/rbenv/rbenv).
 
-* Ruby version
+You will need the [Yarn package manager](https://yarnpkg.com/en/).
 
-* System dependencies
+```
+cd blackfem-take-home-interview
+gem install bundler --no-rdoc --no-ri
+bundle install
+yarn install
+```
 
-* Configuration
+## Running the web server
+The web server is the normal Rails development server:
 
-* Database creation
+`rails s`
 
-* Database initialization
+You will also need to run the webpack dev server at the same time in another window to compile and run the Angular app.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`./bin/webpack-dev-server`
