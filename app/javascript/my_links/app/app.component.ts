@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import templateString from './app.component.html'
 import './app.component.css';
+
 
 @Component({
   selector: 'hello-angular',
-  template: `<h1>Hello {{name}}</h1>`
+  template: templateString,
 })
 export class AppComponent {
   name = 'My Links!';
