@@ -29,6 +29,14 @@ The Rails app is configured to use PostgreSQL as its database. Assuming you have
 
 `rake db:create`
 
-And populate it with
+And populate it with:
 
 `rake db:migrate`
+
+After that, load the seed data with:
+
+`rake db:seed`
+
+The above three commands can theoretically be run all at once with:
+
+`rake db:setup`
