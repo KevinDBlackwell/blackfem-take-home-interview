@@ -1,24 +1,42 @@
-# README
+# BlackFem Take Home Interview - My Links
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby and Rails version
+This sample app has been run and tested with Ruby version 2.5.0 and Rails 5.1.5.
 
-Things you may want to cover:
+## Installing
+It is recommended that you install using [RVM](https://rvm.io) or [rbenv](https://github.com/rbenv/rbenv).
 
-* Ruby version
+You will need the [Yarn package manager](https://yarnpkg.com/en/).
 
-* System dependencies
+```
+cd blackfem-take-home-interview
+gem install bundler --no-rdoc --no-ri
+bundle install
+yarn install
+```
 
-* Configuration
+## Running the web server
+The web server is the normal Rails development server:
 
-* Database creation
+`rails s`
 
-* Database initialization
+You will also need to run the webpack dev server at the same time in another window to compile and run the Angular app.
 
-* How to run the test suite
+`./bin/webpack-dev-server`
 
-* Services (job queues, cache servers, search engines, etc.)
+## Initializing the database
+The Rails app is configured to use PostgreSQL as its database. Assuming you have PostgreSQL installed on your system and it is running, you should be able to create the database with:
 
-* Deployment instructions
+`rake db:create`
 
-* ...
+And populate it with:
+
+`rake db:migrate`
+
+After that, load the seed data with:
+
+`rake db:seed`
+
+The above three commands can theoretically be run all at once with:
+
+`rake db:setup`
