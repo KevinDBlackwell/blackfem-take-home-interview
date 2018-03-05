@@ -14,7 +14,11 @@ import { LinkComponent } from './link/link.component';
     BrowserModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [{ provide: XSRFStrategy, useFactory: xsrfFactory}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function xsrfFactory() {
+  return new CookieXSRFStrategy('XSRF-TOKEN', 'X-CSRF-TOKEN');
+}
