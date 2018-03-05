@@ -19,11 +19,11 @@ links = Link.create(
    }, {
      url: 'https://en.wikipedia.org/wiki/Main_Page',
      title: 'English Wikipedia',
-     description: 'The online encyclopedia that anyone can edit, in English',
+     description: 'The online encyclopedia that anyone can edit, in English.',
    }, {
      url: 'https://www.blackfem.org/',
      title: 'BlackFem Homepage',
      description: ('The homepage of BlackFem Inc, a non-profit dedicated to ' + 
-                   'financial literacy for schoolchildren'),
+                   'financial literacy for schoolchildren.'),
    }]
 )

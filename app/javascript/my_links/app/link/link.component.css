@@ -1,1 +1,6 @@
-
+.link {
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 1rem;
+  padding: 2rem;
+}
