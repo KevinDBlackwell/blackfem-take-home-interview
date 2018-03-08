@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   scope 'api' do
     resources 'links', only: [] do
       get 'all', on: :collection
+      delete 'delete'
     end
   end
+  resources :links
 end
