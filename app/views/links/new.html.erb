@@ -4,21 +4,38 @@
         <title>Add a New Link</title>
     </head>
     <body>
-        <h1>Add a New Link</h1>
+        <div id="container">
+            <br><br><br><br><br><br>
+            <h1>Add a New Link</h1>
 
-        <%= form_tag :action => 'create' do %>
-        <p><label for = "url">URL</label>:
+            <%= form_tag :action => 'create' do %>
+            <p><label for = "url">URL</label>: <br>
+            
+            <%= text_field 'links', 'url', :required => true %></p>
+            <p><label for = "title">Title</label>: <br>
+            
+            <%= text_field 'links', 'title', :required => true %></p>
         
-        <%= text_field 'links', 'url' %></p>
-        <p><label for = "title">Title</label>:
-        
-        <%= text_field 'links', 'title' %></p>
-    
-        <p><label for = "description">Description</label><br/>
-        
-        <%= text_area 'links', 'description' %></p>
-        <%= submit_tag "Create" %>
-        
-        <% end -%>
+            <p><label for = "description">Description</label>: <br/>
+            
+            <%= text_area 'links', 'description', :required => true %></p>
+            <%= submit_tag "Create" %>
+            
+            <% end -%>
+            <br><br><br><br><br><br><br>
+        </div>
     </body>
+    <style>
+        body {
+            background-color: grey;
+            text-align: center;
+        }
+
+        #container {
+            background-color: white;
+            height: 100%;
+            width: 60%;
+            margin: 0 auto;
+        }
+    </style>
 </html>
